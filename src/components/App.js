@@ -1,8 +1,19 @@
 import React from 'react'
 import '../styles/App.css';
 import { useState, useEffect } from 'react';
+
+const[user,setUser] = useSteate();
 const App = () => {
-//code here 
+fatch("https://content.newtonschool.co/v1/pr/main/users")
+ .then(responce=>{
+ return responce.json()
+})
+ .then(data =>{
+ setUser(data)
+}
+useEffect()=>{
+ fatchData()
+},[])
  
 
 
