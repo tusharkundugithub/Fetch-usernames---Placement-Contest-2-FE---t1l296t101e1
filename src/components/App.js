@@ -2,18 +2,20 @@ import React from 'react'
 import '../styles/App.css';
 import { useState, useEffect } from 'react';
 
-const[user,setUser] = useSteate();
 const App = () => {
-fatch("https://content.newtonschool.co/v1/pr/main/users")
- .then(responce=>{
- return responce.json()
-})
- .then(data =>{
- setUser(data)
+ const[name,setName] = useState("");
+ const[id,setId] = uaeState(1);
+ useEffect(()=>{
+  fetch('https://content.newtonschool.co/v1/pr/main/users/${id}'}
+  .then((resp)=>resp.json())
+  .then((data)=>{
+   console.log(data.name);
+   setName(data.name);
+  })
+ },[id])
+ const changeInput=(e)=>{
+  setld(e.target.value)
 }
-useEffect()=>{
- fatchData()
-},[])
  
 
 
