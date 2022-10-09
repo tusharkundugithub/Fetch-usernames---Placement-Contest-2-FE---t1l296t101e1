@@ -6,7 +6,7 @@ const App = () => {
  const[name,setName] = useState("");
  const[id,setId] = uaeState(1);
  useEffect(()=>{
-  fetch('https://content.newtonschool.co/v1/pr/main/users/${id}'}
+  fetch('https://content.newtonschool.co/v1/pr/main/users/${id}')
   .then((resp)=>resp.json())
   .then((data)=>{
    console.log(data.name);
@@ -14,7 +14,7 @@ const App = () => {
   })
  },[id])
  const changeInput=(e)=>{
-  setld(e.target.value)
+  setId(e.target.value)
 }
  
 
